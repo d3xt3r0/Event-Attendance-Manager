@@ -37,7 +37,8 @@ class EventAdapter(val events: ArrayList<Event>) : RecyclerView.Adapter<EventAda
                 ("name" to event.name,
                         "days" to event.days,
                         "date" to event.date,
-                        "venue" to event.venue
+                        "venue" to event.venue,
+                        "id" to event.id
                 ))
             }
 

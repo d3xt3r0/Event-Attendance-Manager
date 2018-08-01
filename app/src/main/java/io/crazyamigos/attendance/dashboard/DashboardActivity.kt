@@ -14,6 +14,7 @@ import kotlinx.android.synthetic.main.activity_dashboard.*
 class DashboardActivity : AppCompatActivity() {
 
     val bundle = Bundle()
+    val bundle2 = Bundle()
 
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
 
@@ -35,7 +36,9 @@ class DashboardActivity : AppCompatActivity() {
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_members_list -> {
+                bundle2.putString("id", intent.getStringExtra("id") )
                 val memberList = MemberListFragment()
+                memberList.arguments = bundle2
                 replaceFragment(memberList)
                 return@OnNavigationItemSelectedListener true
             }
