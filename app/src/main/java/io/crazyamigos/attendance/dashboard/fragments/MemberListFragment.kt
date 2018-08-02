@@ -77,7 +77,7 @@ class MemberListFragment : Fragment()   {
 
                 val adapter = MemberListAdapter(names)
 
-                recyclerView.adapter = adapter
+                partRecyclerView.adapter = adapter
 
             }
 
