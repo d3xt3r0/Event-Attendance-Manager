@@ -52,7 +52,7 @@ class MemberListFragment : Fragment()   {
 
             val response = client.newCall(request).execute()
 
-            Log.d("TEQT", response.body()!!.string())
+          //  Log.d("TEQT", response.body()!!.string())
 
             if (response.body() != null){
 

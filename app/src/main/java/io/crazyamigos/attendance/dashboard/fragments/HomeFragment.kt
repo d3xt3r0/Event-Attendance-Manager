@@ -21,7 +21,7 @@ class HomeFragment : Fragment() {
         name.text = arguments!!.getString("name")
         date.text = arguments!!.getString("date")
         venue.text = arguments!!.getString("venue")
-        days.text = arguments!!.getString("days")
+        days.text = arguments!!.getInt("days").toString()
     }
 
 

@@ -54,7 +54,7 @@ class DashboardActivity : AppCompatActivity() {
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
 
         bundle.putString("name", intent.getStringExtra("name") )
-        bundle.putString("days", intent.getStringExtra("days") )
+        bundle.putInt("days", intent.getIntExtra("days",0) )
         bundle.putString("date", intent.getStringExtra("date") )
         bundle.putString("venue", intent.getStringExtra("venue") )
 
