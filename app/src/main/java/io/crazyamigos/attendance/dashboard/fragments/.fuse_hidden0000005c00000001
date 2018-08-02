@@ -59,7 +59,6 @@ class MemberListFragment : Fragment()   {
                 val responseString = response.body()!!.string()
                 val json = JSONObject(responseString)
                 val namesJson = json.getJSONArray("events")
-                Log.d("TEQT","inside if")
 
                 for(i in 0..namesJson.length() - 1){
                     names.add(namesJson.getJSONObject(i).getString("name"))
