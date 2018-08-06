@@ -26,6 +26,7 @@ class EventActivity : AppCompatActivity() {
         setContentView(R.layout.activity_events)
         setSupportActionBar(toolbar)
 
+
         doAsync {
 
             val pref = getSharedPreferences("event", 0)
@@ -77,9 +78,8 @@ class EventActivity : AppCompatActivity() {
             }
         }
 
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
+        fab.setOnClickListener {
+            startActivity(intentFor<CreateEventActivity>())
         }
     }
 

@@ -26,7 +26,9 @@ class DashboardActivity : AppCompatActivity() {
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_add_member -> {
+                bundle2.putString("id", intent.getStringExtra("id") )
                 val addMember = AddMemberFragment()
+                addMember.arguments = bundle2
                 replaceFragment(addMember)
                 return@OnNavigationItemSelectedListener true
             }

@@ -24,6 +24,16 @@
             android:layout_height="wrap_content"
             android:hint="email"
             android:id="@+id/cont_email"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="organisation"
+            android:id="@+id/cont_org"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Register ID"
+            android:id="@+id/cont_reg_id"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

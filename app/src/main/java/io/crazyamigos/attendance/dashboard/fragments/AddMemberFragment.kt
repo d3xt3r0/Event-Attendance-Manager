@@ -35,12 +35,12 @@ class AddMemberFragment : Fragment() {
             doAsync {
 
                 val body = FormBody.Builder()
-                        .add("event_id", "rtrtrtrtrtrt")
+                        .add("event_id", arguments!!.getString("id"))
                         .add("name", cont_name.text.toString())
                         .add("phone_number", cont_phone.text.toString())
                         .add("email_address", cont_email.text.toString())
-                        .add("organization", "simat")
-                        .add("reg_id", "skdh")
+                        .add("organization", cont_org.text.toString())
+                        .add("reg_id", cont_reg_id.text.toString())
                         .build()
 
                 val pref = context!!.getSharedPreferences("event", 0)
@@ -57,7 +57,7 @@ class AddMemberFragment : Fragment() {
 
                 val response = client.newCall(request).execute()
 
-                Log.d("TEQT", response.body()!!.string())
+              //  Log.d("TEQT", response.body()!!.string())
 
 
                 uiThread {
@@ -69,14 +69,13 @@ class AddMemberFragment : Fragment() {
                             if (response.body() != null) {
                                 /*val jsonResponse = JSONObject(response.body()!!.string())
                                 val status = jsonResponse.getString("message")*/
-                                Toast.makeText(context, "done", Toast.LENGTH_SHORT).show()
+                                Toast.makeText(context, "Done", Toast.LENGTH_SHORT).show()
                             }
 
                         }
 
                         400 -> {
                             Toast.makeText(context, "not working", Toast.LENGTH_SHORT).show()
-                            cont_name.setText("not working")
 
                         }
 
